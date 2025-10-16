@@ -1,0 +1,13 @@
+Serveur :
+Modifier le serveur pour qu'il puisse à la fois recevoir et envoyer des messages
+
+Client :
+Modifier le client pour qu'il puisse à la fois recevoir et envoyer des messages
+
+1 - Le serveur écoute
+2 - Le client se connecte
+3 - Le client envoie un premier message
+4 - Le serveur récupère le message et l'affiche
+5 - Le serveur envoie un message
+6 - Le client récupère le message et l'affiche 
+7 - On ferme les connexions
