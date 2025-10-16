@@ -33,18 +33,20 @@ class serverHttp {
             response = ("HTTP/1.1 404 Not found\n".getBytes("UTF-8"));
             out.write(response);
         }
-        response = Files.readAllBytes(file.toPath());
-        if(fileToGet.split("\\.")[1].equals("pdf")){
-            out.write("HTTP/1.1 200 Ok\nContent-type:application/pdf;\n\r\n".getBytes("UTF-8"));
-            out.write(response);
-        }
-        else if(fileToGet.split("\\.")[1].equals("html")){
-            out.write("HTTP/1.1 200 OK\nContent-type:text/HTML; charset=utf-8;\n\r\n".getBytes("UTF-8"));
-            out.write(response);
-        }
-        else if(fileToGet.split("\\.")[1].equals("jpg")){
-            out.write("HTTP/1.1 200 OK\nContent-type:image/jpg;\n\r\n".getBytes("UTF-8"));
-            out.write(response);
+        else{
+            response = Files.readAllBytes(file.toPath());
+            if(fileToGet.split("\\.")[1].equals("pdf")){
+                out.write("HTTP/1.1 200 Ok\nContent-type:application/pdf;\n\r\n".getBytes("UTF-8"));
+                out.write(response);
+            }
+            else if(fileToGet.split("\\.")[1].equals("html")){
+                out.write("HTTP/1.1 200 OK\nContent-type:text/HTML; charset=utf-8;\n\r\n".getBytes("UTF-8"));
+                out.write(response);
+            }
+            else if(fileToGet.split("\\.")[1].equals("jpg")){
+                out.write("HTTP/1.1 200 OK\nContent-type:image/jpg;\n\r\n".getBytes("UTF-8"));
+                out.write(response);
+            }
         }
         server.close();
     }
