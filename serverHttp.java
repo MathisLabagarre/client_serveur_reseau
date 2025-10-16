@@ -39,7 +39,7 @@ class serverHttp {
                 out.write("HTTP/1.1 200 Ok\nContent-type:application/pdf;\n\r\n".getBytes("UTF-8"));
                 out.write(response);
             }
-            else if(fileToGet.split("\\.")[1].equals("html")){
+            else if(fileToGet.split("\\.")[1].equals("html") || fileToGet.split("\\.")[1].equals("txt")){
                 out.write("HTTP/1.1 200 OK\nContent-type:text/HTML; charset=utf-8;\n\r\n".getBytes("UTF-8"));
                 out.write(response);
             }
